@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Replace TITLE and description for this specific project. -->
+  <title>Project title — Your Name</title>
+  <meta name="description" content="One-sentence summary of this project.">
+  <!-- NOTE: this page lives two levels deep (projects/<slug>/), so every link
+       back to the shell uses ../../ — this is the ONLY place that pattern is
+       needed, which is exactly what keeps projects decoupled from the shell. -->
+  <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../../assets/css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ===== SHARED NAV (paths are ../../ here because we're two levels deep) -->
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="brand" href="../../index.html">Your&nbsp;Name<span class="brand__mark">.</span></a>
+      <nav class="site-nav" aria-label="Primary">
+        <ul>
+          <li><a href="../../index.html">Home</a></li>
+          <li><a href="../../work.html" aria-current="page">Work</a></li>
+          <li><a href="../../approach.html">Approach</a></li>
+          <li><a href="../../contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <!-- ===== /SHARED NAV ===== -->
+
+  <main id="main">
+    <section class="section--tight">
+      <div class="container">
+        <p style="margin-bottom:0.5rem;"><a href="../../work.html">&larr; Back to work</a></p>
+        <h1>Project title</h1>
+        <p class="lede">A one-line framing: what this is and who it was for.</p>
+      </div>
+    </section>
+
+    <section class="section--tight">
+      <div class="container">
+        <div class="prose stack">
+          <h2>The problem</h2>
+          <p>Where were people getting stuck? What was dense, flat, or overwhelming?</p>
+
+          <h2>What I did</h2>
+          <p>The design decisions and the format you chose, and why.</p>
+
+          <h2>The outcome</h2>
+          <p>What changed. Include real results if you have them; keep it honest if you don&rsquo;t.</p>
+
+          <!-- Embed builds, images (with real alt text), or video as needed.
+               Example:
+               <img src="screenshot.png" alt="Describe what the screenshot shows, not 'screenshot'.">
+          -->
+
+          <div class="btn-row">
+            <a class="btn btn--ghost" href="../../work.html">See more work</a>
+            <a class="btn btn--primary" href="../../contact.html">Get in touch</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== SHARED FOOTER ===== -->
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <p style="margin:0;">&copy; <span id="year">2026</span> Your Name</p>
+      <ul>
+        <li><a href="../../work.html">Work</a></li>
+        <li><a href="../../approach.html">Approach</a></li>
+        <li><a href="../../contact.html">Contact</a></li>
+        <li><a href="#" rel="me">LinkedIn</a></li>
+      </ul>
+    </div>
+  </footer>
+  <!-- ===== /SHARED FOOTER ===== -->
+
+  <script src="../../assets/js/site.js" defer></script>
+</body>
+</html>

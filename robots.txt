@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://mcroney531-ctrl.github.io/portfolio/sitemap.xml
