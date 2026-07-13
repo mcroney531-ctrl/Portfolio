@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Update the domain here if you move to a custom domain. Add a <url> block
+     for each new project page under projects/<slug>/. -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://mcroney531-ctrl.github.io/portfolio/</loc>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://mcroney531-ctrl.github.io/portfolio/work.html</loc>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://mcroney531-ctrl.github.io/portfolio/approach.html</loc>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://mcroney531-ctrl.github.io/portfolio/contact.html</loc>
+    <changefreq>yearly</changefreq>
+  </url>
+</urlset>

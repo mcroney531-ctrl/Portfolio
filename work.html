@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Work — Your Name</title>
+  <meta name="description" content="Selected learning design, performance support, and strategy work — organized by format, filterable by capability.">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="canonical" href="https://mcroney531-ctrl.github.io/portfolio/work.html">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ===== SHARED NAV — keep this block identical across all pages ===== -->
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="brand" href="index.html">Your&nbsp;Name<span class="brand__mark">.</span></a>
+      <nav class="site-nav" aria-label="Primary">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="work.html" aria-current="page">Work</a></li>
+          <li><a href="approach.html">Approach</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <!-- ===== /SHARED NAV ===== -->
+
+  <main id="main">
+    <section class="section--tight">
+      <div class="container">
+        <h1>Work</h1>
+        <p class="lede">
+          A growing body of learning design, performance support, and strategy
+          work. It&rsquo;s organized by <strong>format</strong> &mdash; the kind
+          of thing it is &mdash; and tagged by <strong>capability</strong> so you
+          can find the specific skill you&rsquo;re looking for.
+        </p>
+      </div>
+    </section>
+
+    <section class="section--tight" aria-labelledby="work-heading">
+      <div class="container">
+        <h2 id="work-heading" class="visually-hidden">Projects</h2>
+
+        <!-- ================= HONEST IN-PROGRESS STATE =================
+             There are no published projects yet. Rather than manufacture
+             filler, this states plainly that real work is on the way.
+             When you add your first project, DELETE this .empty-state block
+             and uncomment the scaffold below it. -->
+        <div class="empty-state">
+          <h2>Selected projects are on their way.</h2>
+          <p>
+            This portfolio is being built deliberately. I&rsquo;m curating a set
+            of real projects &mdash; scenario-based and gamified eLearning,
+            performance-support tools, and strategy work &mdash; rather than
+            posting placeholder samples.
+          </p>
+          <p style="margin-bottom:0;">
+            In the meantime, here&rsquo;s
+            <a href="approach.html">how I approach the work</a>, or
+            <a href="contact.html">reach out</a> and I&rsquo;ll share relevant
+            pieces directly.
+          </p>
+        </div>
+        <!-- ================= /HONEST IN-PROGRESS STATE ================= -->
+
+        <!-- ================= WORK SCAFFOLD (uncomment when you add projects)
+             HOW THE TWO AXES WORK
+             ---------------------
+             FORMAT (the spine): each project lives under ONE .format-group
+               section below. These are the section headings visitors scan.
+             CAPABILITY (the cross-cut): each card lists one or more capability
+               tags in data-capabilities="a,b,c". The filter bar lets a visitor
+               show only cards matching a capability, across every format.
+
+             TO ADD A PROJECT:
+               1. Create projects/<slug>/index.html (copy projects/_template/).
+               2. Copy one <article class="project-card"> below into the right
+                  format group, and set:
+                    - data-format          (must match the group it sits in)
+                    - data-capabilities    (comma-separated, no spaces needed)
+                    - the link, title, blurb, and visible tags.
+               3. If a capability isn't in the filter bar yet, add a
+                  <button class="filter-btn"> for it (data-filter="<capability>").
+             The site.js filter is progressive enhancement: with JS off, every
+             project still shows, grouped by format.
+        -->
+        <!--
+        <div class="work-controls" role="group" aria-label="Filter projects by capability">
+          <span class="work-controls__label" id="filter-label">Filter by capability:</span>
+          <button class="filter-btn" type="button" data-filter="all" aria-pressed="true">All</button>
+          <button class="filter-btn" type="button" data-filter="scenario-design" aria-pressed="false">Scenario design</button>
+          <button class="filter-btn" type="button" data-filter="gamification" aria-pressed="false">Gamification</button>
+          <button class="filter-btn" type="button" data-filter="needs-analysis" aria-pressed="false">Needs analysis</button>
+          <button class="filter-btn" type="button" data-filter="accessibility" aria-pressed="false">Accessibility</button>
+        </div>
+
+        <div class="format-group">
+          <h2 class="format-group__title" id="fmt-elearning">eLearning builds</h2>
+          <div class="card-grid" role="list">
+            <article class="project-card" role="listitem"
+                     data-format="elearning"
+                     data-capabilities="scenario-design,accessibility">
+              <h3><a href="projects/example-slug/">Project title</a></h3>
+              <p>One sentence on the problem it solved and for whom.</p>
+              <ul class="tag-list">
+                <li class="tag">Scenario design</li>
+                <li class="tag">Accessibility</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+
+        <div class="format-group">
+          <h2 class="format-group__title" id="fmt-support">Performance support</h2>
+          <div class="card-grid" role="list">
+            (add project cards here)
+          </div>
+        </div>
+
+        <div class="format-group">
+          <h2 class="format-group__title" id="fmt-strategy">Strategy &amp; planning</h2>
+          <div class="card-grid" role="list">
+            (add project cards here)
+          </div>
+        </div>
+
+        <div class="format-group">
+          <h2 class="format-group__title" id="fmt-video">Video walkthroughs</h2>
+          <div class="card-grid" role="list">
+            (add project cards here)
+          </div>
+        </div>
+
+        <p class="visually-hidden" role="status" aria-live="polite" data-filter-status></p>
+        -->
+        <!-- ================= /WORK SCAFFOLD ================= -->
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== SHARED FOOTER — keep identical across pages ===== -->
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <p style="margin:0;">&copy; <span id="year">2026</span> Your Name</p>
+      <ul>
+        <li><a href="work.html">Work</a></li>
+        <li><a href="approach.html">Approach</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="#" rel="me">LinkedIn</a></li>
+      </ul>
+    </div>
+  </footer>
+  <!-- ===== /SHARED FOOTER ===== -->
+
+  <script src="assets/js/site.js" defer></script>
+</body>
+</html>
