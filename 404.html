@@ -16,7 +16,13 @@
        served at the root, change /portfolio/ to / throughout this file. -->
   <header class="site-header">
     <div class="container site-header__inner">
-      <a class="brand" href="/portfolio/index.html">Your&nbsp;Name<span class="brand__mark">.</span></a>
+      <div class="site-header__left">
+        <button class="menu-toggle" type="button" aria-controls="site-sidebar" aria-expanded="false" hidden>
+          <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M3 6h18M3 12h18M3 18h18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          <span class="visually-hidden">Open menu</span>
+        </button>
+        <a class="brand" href="/portfolio/index.html">Your&nbsp;Name<span class="brand__mark">.</span></a>
+      </div>
       <nav class="site-nav" aria-label="Primary">
         <ul>
           <li><a href="/portfolio/index.html">Home</a></li>
@@ -27,6 +33,22 @@
       </nav>
     </div>
   </header>
+
+  <!-- ===== SECONDARY SIDEBAR (off-canvas) — mechanism only for now. -->
+  <div class="sidebar-overlay" data-sidebar-overlay hidden></div>
+  <aside class="sidebar" id="site-sidebar" aria-label="Secondary navigation" aria-hidden="true">
+    <div class="sidebar__head">
+      <p class="sidebar__title">Menu</p>
+      <button class="sidebar__close" type="button" data-sidebar-close>
+        <span aria-hidden="true">&times;</span>
+        <span class="visually-hidden">Close menu</span>
+      </button>
+    </div>
+    <nav class="sidebar__nav" aria-label="Secondary">
+      <p class="sidebar__placeholder">More to come.</p>
+    </nav>
+  </aside>
+  <!-- ===== /SECONDARY SIDEBAR ===== -->
 
   <main id="main">
     <section class="hero">
@@ -44,5 +66,7 @@
       </div>
     </section>
   </main>
+
+  <script src="/portfolio/assets/js/site.js" defer></script>
 </body>
 </html>
