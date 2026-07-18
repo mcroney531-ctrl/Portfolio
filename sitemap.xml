@@ -3,19 +3,19 @@
      for each new project page under projects/<slug>/. -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://mcroney531-ctrl.github.io/portfolio/</loc>
+    <loc>https://mcroney531-ctrl.github.io/Portfolio/</loc>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://mcroney531-ctrl.github.io/portfolio/work.html</loc>
+    <loc>https://mcroney531-ctrl.github.io/Portfolio/work.html</loc>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://mcroney531-ctrl.github.io/portfolio/approach.html</loc>
+    <loc>https://mcroney531-ctrl.github.io/Portfolio/approach.html</loc>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://mcroney531-ctrl.github.io/portfolio/contact.html</loc>
+    <loc>https://mcroney531-ctrl.github.io/Portfolio/contact.html</loc>
     <changefreq>yearly</changefreq>
   </url>
 </urlset>
