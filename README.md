@@ -32,7 +32,7 @@ robots.txt, sitemap.xml, .nojekyll
 ### Two design decisions worth knowing
 
 - **Flat `.html` files at the root** (not folders) keep the nav markup identical
-  on every page and portable across `github.io/portfolio` and a future custom
+  on every page and portable across `github.io/Portfolio` and a future custom
   domain. To edit the nav, change the `SHARED NAV` block — it's the same in
   every page (only `aria-current` differs to mark the active page).
 - **The shell and the projects are decoupled.** Each project is a standalone
@@ -64,10 +64,10 @@ you add content (real alt text on every image, in particular).
       Gmail — swap for a professional address if you prefer).
 - [ ] If you use a **custom domain**, add a `CNAME` file, update the absolute
       URLs in `sitemap.xml`, `robots.txt`, the `canonical`/`og:url` tags, and
-      change `/portfolio/` paths in `404.html` to `/`.
+      change `/Portfolio/` paths in `404.html` to `/`.
 
 ## Enabling GitHub Pages
 
 Repo **Settings → Pages → Build and deployment → Source: Deploy from a branch**,
 then pick your published branch and `/ (root)`. The site appears at
-`https://mcroney531-ctrl.github.io/portfolio/`.
+`https://mcroney531-ctrl.github.io/Portfolio/`.
