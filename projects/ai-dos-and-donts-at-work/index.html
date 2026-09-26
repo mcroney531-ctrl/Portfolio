@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI Do&rsquo;s &amp; Don&rsquo;ts at Work — Your Name</title>
+  <meta name="description" content="A scenario-based workplace module on using AI well: bring real context, verify the output, stay present in the work — built with its own design system and a reusable activity builder.">
+  <!-- NOTE: this page lives two levels deep (projects/<slug>/), so every link
+       back to the shell uses ../../ — this is the ONLY place that pattern is
+       needed, which is exactly what keeps projects decoupled from the shell. -->
+  <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../../assets/css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ===== SHARED NAV (paths are ../../ here because we're two levels deep) -->
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <div class="site-header__left">
+        <button class="menu-toggle" type="button" aria-controls="site-sidebar" aria-expanded="false" hidden>
+          <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M3 6h18M3 12h18M3 18h18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          <span class="visually-hidden">Open menu</span>
+        </button>
+        <a class="brand" href="../../index.html">Your&nbsp;Name<span class="brand__mark">.</span></a>
+      </div>
+      <nav class="site-nav" aria-label="Primary">
+        <ul>
+          <li><a href="../../index.html">Home</a></li>
+          <li><a href="../../work.html" aria-current="page">Work</a></li>
+          <li><a href="../../approach.html">Approach</a></li>
+          <li><a href="../../contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <!-- ===== /SHARED NAV ===== -->
+
+  <!-- ===== SECONDARY SIDEBAR (off-canvas) — mechanism only for now. -->
+  <div class="sidebar-overlay" data-sidebar-overlay hidden></div>
+  <aside class="sidebar" id="site-sidebar" aria-label="Secondary navigation" aria-hidden="true">
+    <div class="sidebar__head">
+      <p class="sidebar__title">Menu</p>
+      <button class="sidebar__close" type="button" data-sidebar-close>
+        <span aria-hidden="true">&times;</span>
+        <span class="visually-hidden">Close menu</span>
+      </button>
+    </div>
+    <nav class="sidebar__nav" aria-label="Secondary">
+      <p class="sidebar__placeholder">More to come.</p>
+    </nav>
+  </aside>
+  <!-- ===== /SECONDARY SIDEBAR ===== -->
+
+  <main id="main">
+    <section class="section--tight">
+      <div class="container">
+        <p style="margin-bottom:0.5rem;"><a href="../../work.html">&larr; Back to work</a></p>
+        <h1>AI Do&rsquo;s &amp; Don&rsquo;ts at Work</h1>
+        <p class="lede">
+          A short scenario-based module for anyone using AI tools on the job
+          &mdash; built around three habits worth doing on purpose, not a
+          policy document nobody reads.
+        </p>
+      </div>
+    </section>
+
+    <section class="section--tight">
+      <div class="container">
+        <div class="prose stack">
+          <h2>The problem</h2>
+          <p>
+            Most &ldquo;use AI responsibly&rdquo; guidance at work is a static
+            list of dos and don&rsquo;ts &mdash; read once, retained never. It
+            tells people what to believe about AI tools without ever putting
+            them in a moment where they have to apply it. The habits that
+            actually matter (bringing real context, checking what comes back,
+            staying accountable for the result) are practiced in the moment or
+            not at all.
+          </p>
+
+          <h2>What I did</h2>
+          <p>
+            I built a short, self-contained module organized around three
+            clusters &mdash; <strong>Bring</strong>, <strong>Verify</strong>,
+            and <strong>Stay Present</strong> &mdash; each grounded in a
+            realistic workplace moment (drafting a client email, comparing
+            AI-generated sources, editing a &ldquo;final&rdquo; draft). Every
+            cluster follows the same beat: a short explainer, then a scenario
+            question with plausible wrong answers, then feedback that explains
+            <em>why</em> &mdash; not just whether the choice was right.
+          </p>
+          <p>
+            Underneath the module is a small design system: tokens for color,
+            type, and spacing; documented components; motion specs (built
+            with GSAP); and an interaction-states reference &mdash; all pulled
+            from the same CSS the module actually runs on, not a separate
+            brand exercise. I also built a companion <strong>Activity
+            Builder</strong> that assembles new self-contained activities from
+            the same components, so the pattern isn&rsquo;t locked to this one
+            module.
+          </p>
+
+          <h2>The outcome</h2>
+          <p>
+            A live, fully built six-scenario module with real corrective
+            feedback on every question, plus the design system and builder
+            tool that make the pattern reusable for the next activity. No
+            build step, no framework &mdash; vanilla HTML/CSS/JS with GSAP for
+            motion.
+          </p>
+
+          <figure style="margin: var(--space-6) 0;">
+            <img src="assets/thumb.png" alt="Landing screen of the AI Do's & Don'ts at Work module, showing three illustrated cards for the Bring, Verify, and Stay Present clusters with progress badges.">
+            <figcaption style="color: var(--muted); font-size: 0.9rem; margin-top: var(--space-2);">
+              The landing screen &mdash; six scenarios organized into three clusters.
+            </figcaption>
+          </figure>
+
+          <figure style="margin: var(--space-6) 0;">
+            <img src="assets/scenario.png" alt="A scenario question asking what's missing from a vague AI prompt about a delayed client email, with four multiple-choice options.">
+            <figcaption style="color: var(--muted); font-size: 0.9rem; margin-top: var(--space-2);">
+              One of the six scenario questions, with plausible distractors and corrective feedback behind it.
+            </figcaption>
+          </figure>
+
+          <div class="btn-row">
+            <a class="btn btn--primary" href="https://mcroney531-ctrl.github.io/ELC564-StyleGuide/" target="_blank" rel="noopener">Launch the activity</a>
+            <a class="btn btn--ghost" href="https://mcroney531-ctrl.github.io/ELC564-StyleGuide/style-guide.html" target="_blank" rel="noopener">View the style guide</a>
+          </div>
+          <div class="btn-row">
+            <a class="btn btn--ghost" href="../../work.html">See more work</a>
+            <a class="btn btn--ghost" href="../../contact.html">Get in touch</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== SHARED FOOTER ===== -->
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <p style="margin:0;">&copy; <span id="year">2026</span> Your Name</p>
+      <ul>
+        <li><a href="../../work.html">Work</a></li>
+        <li><a href="../../approach.html">Approach</a></li>
+        <li><a href="../../contact.html">Contact</a></li>
+        <li><a href="#" rel="me">LinkedIn</a></li>
+      </ul>
+    </div>
+  </footer>
+  <!-- ===== /SHARED FOOTER ===== -->
+
+  <script src="../../assets/js/site.js" defer></script>
+</body>
+</html>
