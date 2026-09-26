@@ -499,6 +499,11 @@ ul, ol { padding-left: 1.25rem; }
   object-fit: cover;
   transition: transform 0.28s ease;
 }
+/* For illustrations/artwork with their own negative space (as opposed to a
+   screenshot meant to fill the frame edge-to-edge): shrink to fit inside the
+   frame instead of cropping into it. The media background shows as a border. */
+.thumb__media--contain { padding: var(--space-4); }
+.thumb__media--contain img { object-fit: contain; }
 .thumb__overlay {
   position: absolute;
   inset: 0;
