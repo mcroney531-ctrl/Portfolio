@@ -69,105 +69,140 @@
       </div>
     </section>
 
-    <section class="section--tight" aria-labelledby="work-heading">
+    <!-- ===== WORK SHELVES =====
+         Each shelf is one FORMAT (the section spine). Its short description
+         sits under the heading; projects are horizontal thumbnail cards you
+         scroll with the arrows (or swipe/trackpad). CAPABILITY tags live in
+         each card's hover overlay — that's the second axis.
+
+         TO ADD A PROJECT: copy the commented REAL PROJECT TEMPLATE inside a
+         shelf's track, point its link at projects/<slug>/, add a thumbnail
+         image, and set the title + capability tags. Delete a placeholder tile
+         as you add a real one.
+         TO ADD A SHELF: copy a whole <section class="work-shelf"> block and
+         give its heading (and the arrows' aria-labels) a new format name + id.
+         The arrows are progressive enhancement: they ship hidden, and site.js
+         reveals them only when a shelf is wide enough to scroll. -->
+
+    <section class="section--tight work-shelf" aria-labelledby="shelf-elearning">
       <div class="container">
-        <h2 id="work-heading" class="visually-hidden">Projects</h2>
+        <h2 id="shelf-elearning" class="work-shelf__title">eLearning builds</h2>
+        <p class="work-shelf__desc">
+          Scenario-based, gamified, and utility courses &mdash; designed around
+          where learners actually get stuck, not just what needs covering.
+        </p>
 
-        <!-- ================= HONEST IN-PROGRESS STATE =================
-             There are no published projects yet. Rather than manufacture
-             filler, this states plainly that real work is on the way.
-             When you add your first project, DELETE this .empty-state block
-             and uncomment the scaffold below it. -->
-        <div class="empty-state">
-          <h2>Selected projects are on their way.</h2>
-          <p>
-            This portfolio is being built deliberately. I&rsquo;m curating a set
-            of real projects &mdash; scenario-based and gamified eLearning,
-            performance-support tools, and strategy work &mdash; rather than
-            posting placeholder samples.
-          </p>
-          <p style="margin-bottom:0;">
-            In the meantime, here&rsquo;s
-            <a href="approach.html">how I approach the work</a>, or
-            <a href="contact.html">reach out</a> and I&rsquo;ll share relevant
-            pieces directly.
-          </p>
+        <div class="carousel" data-carousel>
+          <button class="carousel__arrow" type="button" data-carousel-prev
+                  aria-label="Scroll eLearning builds left" hidden>
+            <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M15 6l-6 6 6 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+
+          <ul class="carousel__track" data-carousel-track tabindex="0"
+              aria-label="eLearning builds projects">
+
+            <!-- REAL PROJECT TEMPLATE — copy, uncomment, and fill in:
+            <li class="thumb">
+              <a class="thumb__link" href="projects/example-slug/">
+                <span class="thumb__media">
+                  <img src="projects/example-slug/thumb.jpg" alt="Project title thumbnail">
+                  <span class="thumb__overlay">
+                    <ul class="thumb__tags">
+                      <li class="thumb__tag">Scenario design</li>
+                      <li class="thumb__tag">Accessibility</li>
+                    </ul>
+                  </span>
+                </span>
+                <span class="thumb__body"><span class="thumb__title">Project title</span></span>
+              </a>
+            </li>
+            -->
+
+            <li class="thumb thumb--placeholder">
+              <div class="thumb__inner">
+                <div class="thumb__media"><span class="thumb__badge">Coming soon</span></div>
+                <div class="thumb__body"><p class="thumb__title">New build in progress</p></div>
+              </div>
+            </li>
+            <li class="thumb thumb--placeholder">
+              <div class="thumb__inner">
+                <div class="thumb__media"><span class="thumb__badge">Coming soon</span></div>
+                <div class="thumb__body"><p class="thumb__title">New build in progress</p></div>
+              </div>
+            </li>
+            <li class="thumb thumb--placeholder">
+              <div class="thumb__inner">
+                <div class="thumb__media"><span class="thumb__badge">Coming soon</span></div>
+                <div class="thumb__body"><p class="thumb__title">New build in progress</p></div>
+              </div>
+            </li>
+            <li class="thumb thumb--placeholder">
+              <div class="thumb__inner">
+                <div class="thumb__media"><span class="thumb__badge">Coming soon</span></div>
+                <div class="thumb__body"><p class="thumb__title">New build in progress</p></div>
+              </div>
+            </li>
+          </ul>
+
+          <button class="carousel__arrow" type="button" data-carousel-next
+                  aria-label="Scroll eLearning builds right" hidden>
+            <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M9 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
         </div>
-        <!-- ================= /HONEST IN-PROGRESS STATE ================= -->
-
-        <!-- ================= WORK SCAFFOLD (uncomment when you add projects)
-             HOW THE TWO AXES WORK
-             ---------------------
-             FORMAT (the spine): each project lives under ONE .format-group
-               section below. These are the section headings visitors scan.
-             CAPABILITY (the cross-cut): each card lists one or more capability
-               tags in data-capabilities="a,b,c". The filter bar lets a visitor
-               show only cards matching a capability, across every format.
-
-             TO ADD A PROJECT:
-               1. Create projects/<slug>/index.html (copy projects/_template/).
-               2. Copy one <article class="project-card"> below into the right
-                  format group, and set:
-                    - data-format          (must match the group it sits in)
-                    - data-capabilities    (comma-separated, no spaces needed)
-                    - the link, title, blurb, and visible tags.
-               3. If a capability isn't in the filter bar yet, add a
-                  <button class="filter-btn"> for it (data-filter="<capability>").
-             The site.js filter is progressive enhancement: with JS off, every
-             project still shows, grouped by format.
-        -->
-        <!--
-        <div class="work-controls" role="group" aria-label="Filter projects by capability">
-          <span class="work-controls__label" id="filter-label">Filter by capability:</span>
-          <button class="filter-btn" type="button" data-filter="all" aria-pressed="true">All</button>
-          <button class="filter-btn" type="button" data-filter="scenario-design" aria-pressed="false">Scenario design</button>
-          <button class="filter-btn" type="button" data-filter="gamification" aria-pressed="false">Gamification</button>
-          <button class="filter-btn" type="button" data-filter="needs-analysis" aria-pressed="false">Needs analysis</button>
-          <button class="filter-btn" type="button" data-filter="accessibility" aria-pressed="false">Accessibility</button>
-        </div>
-
-        <div class="format-group">
-          <h2 class="format-group__title" id="fmt-elearning">eLearning builds</h2>
-          <div class="card-grid" role="list">
-            <article class="project-card" role="listitem"
-                     data-format="elearning"
-                     data-capabilities="scenario-design,accessibility">
-              <h3><a href="projects/example-slug/">Project title</a></h3>
-              <p>One sentence on the problem it solved and for whom.</p>
-              <ul class="tag-list">
-                <li class="tag">Scenario design</li>
-                <li class="tag">Accessibility</li>
-              </ul>
-            </article>
-          </div>
-        </div>
-
-        <div class="format-group">
-          <h2 class="format-group__title" id="fmt-support">Performance support</h2>
-          <div class="card-grid" role="list">
-            (add project cards here)
-          </div>
-        </div>
-
-        <div class="format-group">
-          <h2 class="format-group__title" id="fmt-strategy">Strategy &amp; planning</h2>
-          <div class="card-grid" role="list">
-            (add project cards here)
-          </div>
-        </div>
-
-        <div class="format-group">
-          <h2 class="format-group__title" id="fmt-video">Video walkthroughs</h2>
-          <div class="card-grid" role="list">
-            (add project cards here)
-          </div>
-        </div>
-
-        <p class="visually-hidden" role="status" aria-live="polite" data-filter-status></p>
-        -->
-        <!-- ================= /WORK SCAFFOLD ================= -->
       </div>
     </section>
+
+    <section class="section--tight work-shelf" aria-labelledby="shelf-support">
+      <div class="container">
+        <h2 id="shelf-support" class="work-shelf__title">Performance support</h2>
+        <p class="work-shelf__desc">
+          Job aids and in-the-moment tools that put the right guidance at the
+          point of need &mdash; so people don&rsquo;t have to hold it all in
+          their head.
+        </p>
+
+        <div class="carousel" data-carousel>
+          <button class="carousel__arrow" type="button" data-carousel-prev
+                  aria-label="Scroll performance support left" hidden>
+            <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M15 6l-6 6 6 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+
+          <ul class="carousel__track" data-carousel-track tabindex="0"
+              aria-label="Performance support projects">
+            <li class="thumb thumb--placeholder">
+              <div class="thumb__inner">
+                <div class="thumb__media"><span class="thumb__badge">Coming soon</span></div>
+                <div class="thumb__body"><p class="thumb__title">New tool in progress</p></div>
+              </div>
+            </li>
+            <li class="thumb thumb--placeholder">
+              <div class="thumb__inner">
+                <div class="thumb__media"><span class="thumb__badge">Coming soon</span></div>
+                <div class="thumb__body"><p class="thumb__title">New tool in progress</p></div>
+              </div>
+            </li>
+            <li class="thumb thumb--placeholder">
+              <div class="thumb__inner">
+                <div class="thumb__media"><span class="thumb__badge">Coming soon</span></div>
+                <div class="thumb__body"><p class="thumb__title">New tool in progress</p></div>
+              </div>
+            </li>
+            <li class="thumb thumb--placeholder">
+              <div class="thumb__inner">
+                <div class="thumb__media"><span class="thumb__badge">Coming soon</span></div>
+                <div class="thumb__body"><p class="thumb__title">New tool in progress</p></div>
+              </div>
+            </li>
+          </ul>
+
+          <button class="carousel__arrow" type="button" data-carousel-next
+                  aria-label="Scroll performance support right" hidden>
+            <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M9 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+        </div>
+      </div>
+    </section>
+    <!-- ===== /WORK SHELVES ===== -->
   </main>
 
   <!-- ===== SHARED FOOTER — keep identical across pages ===== -->

@@ -119,3 +119,54 @@
   if (closeBtn) closeBtn.addEventListener('click', closeSidebar);
   if (overlay)  overlay.addEventListener('click', closeSidebar);
 })();
+
+/* ==========================================================================
+   Work shelves — horizontal carousels.
+   Progressive enhancement: the track scrolls by swipe/trackpad with no JS.
+   This reveals the prev/next arrows (shipped hidden) and wires them up:
+   scroll by ~one viewport of the track, disable at each end, and hide the
+   arrows entirely when a shelf isn't wide enough to scroll. Respects
+   prefers-reduced-motion.
+   ========================================================================== */
+(function () {
+  'use strict';
+
+  var carousels = document.querySelectorAll('[data-carousel]');
+  if (!carousels.length) return;
+
+  var reduce = window.matchMedia &&
+    window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  carousels.forEach(function (root) {
+    var track = root.querySelector('[data-carousel-track]');
+    var prev  = root.querySelector('[data-carousel-prev]');
+    var next  = root.querySelector('[data-carousel-next]');
+    if (!track) return;
+
+    function refresh() {
+      var overflow = track.scrollWidth - track.clientWidth;
+      var scrollable = overflow > 2;
+      if (prev) prev.hidden = !scrollable;
+      if (next) next.hidden = !scrollable;
+      if (!scrollable) return;
+      if (prev) prev.disabled = track.scrollLeft <= 0;
+      if (next) next.disabled = track.scrollLeft >= overflow - 1;
+    }
+
+    function page(dir) {
+      track.scrollBy({
+        left: dir * track.clientWidth * 0.9,
+        behavior: reduce ? 'auto' : 'smooth'
+      });
+    }
+
+    if (prev) prev.addEventListener('click', function () { page(-1); });
+    if (next) next.addEventListener('click', function () { page(1); });
+    track.addEventListener('scroll', function () {
+      window.requestAnimationFrame(refresh);
+    }, { passive: true });
+    window.addEventListener('resize', refresh);
+
+    refresh();
+  });
+})();
